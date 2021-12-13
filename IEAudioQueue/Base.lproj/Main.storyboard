@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twS-13-1Cw">
+                                <rect key="frame" x="37" y="104" width="100" height="34"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="oXO-C7-A40"/>
+                                </constraints>
+                                <state key="normal" title="开始录音">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eH2-8a-tpR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luu-1K-fWC">
+                                <rect key="frame" x="157" y="104" width="100" height="34"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="bgh-jx-0X3"/>
+                                    <constraint firstAttribute="height" constant="34" id="yNE-pN-U3E"/>
+                                </constraints>
+                                <state key="normal" title="暂停录音">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9W-Ug-Qe2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5b-QW-Fyi">
+                                <rect key="frame" x="277" y="104" width="100" height="34"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="H9A-kn-wTo"/>
+                                </constraints>
+                                <state key="normal" title="结束录音">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dsu-R8-OHo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-6z-Hbh">
+                                <rect key="frame" x="20" y="198" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8n-nT-yfo">
+                                <rect key="frame" x="20" y="279.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6C-0M-oGN">
+                                <rect key="frame" x="156.5" y="360" width="101" height="34"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="d3t-n9-tiJ"/>
+                                    <constraint firstAttribute="width" constant="101" id="fuH-dM-rnv"/>
+                                </constraints>
+                                <state key="normal" title="播放">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TSs-7S-AdP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="on7-Fd-YUu">
+                                <rect key="frame" x="157" y="427" width="100" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="sJq-WC-94A"/>
+                                    <constraint firstAttribute="height" constant="34" id="tmb-wD-fvJ"/>
+                                </constraints>
+                                <state key="normal" title="清除数据">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mbo-5V-VoB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pth-6z-Hbh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4LO-CK-9Au"/>
+                            <constraint firstItem="Luu-1K-fWC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="6dh-Yu-0dV"/>
+                            <constraint firstItem="n5b-QW-Fyi" firstAttribute="centerY" secondItem="Luu-1K-fWC" secondAttribute="centerY" id="AWB-Jz-UoB"/>
+                            <constraint firstItem="on7-Fd-YUu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AX4-Wh-GQo"/>
+                            <constraint firstItem="Luu-1K-fWC" firstAttribute="centerY" secondItem="twS-13-1Cw" secondAttribute="centerY" id="NIU-Dy-jcc"/>
+                            <constraint firstItem="Pth-6z-Hbh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tne-N0-aVF"/>
+                            <constraint firstItem="Pth-6z-Hbh" firstAttribute="top" secondItem="twS-13-1Cw" secondAttribute="bottom" constant="60" id="Vxe-P7-8x6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r8n-nT-yfo" secondAttribute="trailing" constant="20" id="YAE-gD-SCb"/>
+                            <constraint firstItem="r8n-nT-yfo" firstAttribute="top" secondItem="Pth-6z-Hbh" secondAttribute="bottom" constant="61" id="dQJ-PJ-qm7"/>
+                            <constraint firstItem="on7-Fd-YUu" firstAttribute="top" secondItem="n6C-0M-oGN" secondAttribute="bottom" constant="33" id="eGV-wQ-h5j"/>
+                            <constraint firstItem="r8n-nT-yfo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="egP-z8-w4c"/>
+                            <constraint firstItem="Luu-1K-fWC" firstAttribute="leading" secondItem="twS-13-1Cw" secondAttribute="trailing" constant="20" id="ifP-d9-BtQ"/>
+                            <constraint firstItem="Luu-1K-fWC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nIz-op-Sy9"/>
+                            <constraint firstItem="n6C-0M-oGN" firstAttribute="top" secondItem="r8n-nT-yfo" secondAttribute="bottom" constant="60" id="pFh-wk-CYj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pth-6z-Hbh" secondAttribute="trailing" constant="20" id="r83-VI-wKZ"/>
+                            <constraint firstItem="n6C-0M-oGN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tOX-DE-DfK"/>
+                            <constraint firstItem="n5b-QW-Fyi" firstAttribute="leading" secondItem="Luu-1K-fWC" secondAttribute="trailing" constant="20" id="uke-Ub-Vps"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pathLabel" destination="r8n-nT-yfo" id="BI4-cV-ieN"/>
+                        <outlet property="pauseButton" destination="Luu-1K-fWC" id="ALR-3g-gZu"/>
+                        <outlet property="playButton" destination="n6C-0M-oGN" id="X1s-2E-d6b"/>
+                        <outlet property="startButton" destination="twS-13-1Cw" id="n1c-hf-jiW"/>
+                        <outlet property="stopButton" destination="n5b-QW-Fyi" id="UwA-CN-6Q4"/>
+                        <outlet property="timeLabel" destination="Pth-6z-Hbh" id="uIm-of-fus"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.623188405797109" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
